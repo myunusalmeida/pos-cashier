@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS Project | Muhammad Yunus Almeida Portfolio</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./boxicons/css/boxicons.min.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+            <div class="main">
+                <nav class="navbar">
+                    <div class="menu-container">
+                        <span class="menu">
+                            <i class='bx bx-menu'></i>
+                        </span>
+                        <a href="#" class="logo">
+                            <i class='bx bxs-shopping-bags'></i> Cashier
+                        </a>
+                    </div>
+                    <div class="search-container">
+                        <form action="#" method="get" class="search-form" autocomplete="off">
+                            <input type="search" class="search-input" name="search" id="search"
+                                placeholder="Cari menu . . ." onkeyup="searchProducts()">
+                            <button type="submit" class="search-button">
+                                <i class='bx bx-search'></i>
+                            </button>
+                        </form>
+                    </div>
+                </nav>
+
+                <div class="categories">
+                    <div class="category-item active" onClick="filterSelection('all')">
+                        All Items
+                    </div>
+                    <div class="category-item" onClick="filterSelection('healthy')">
+                        Healthy
+                    </div>
+                    <div class="category-item" onClick="filterSelection('steak')">
+                        Steak
+                    </div>
+                    <div class="category-item" onClick="filterSelection('burger')">
+                        Burger
+                    </div>
+                    <div class="category-item" onClick="filterSelection('pizza')">
+                        Pizza
+                    </div>
+                    <div class="category-item" onClick="filterSelection('drinks')">
+                        Drinks
+                    </div>
+                </div>
+
+                <div class="products">
+                    <a href="#" class="product-items healthy" data-name="Salad Buah" data-price="10.000"
+                        data-image="product-salad-1.jpeg">
+                        <h2 class="product-title">Salad Buah</h2>
+                        <p class="product-stock">Healthy</p>
+                        <div class="bottom">
+                            <p class="product-price">Rp. 10.000</p>
+                            <img src="./images/product-salad-1.jpeg" class="product-image">
+                        </div>
+                    </a>
+                    <a href="#" class="product-items steak" data-name="Classic Beef Steak" data-price="24.000"
+                        data-image="product-meat-1.jpeg">
+                        <h2 class="product-title">Classic Beef Steak</h2>
+                        <p class="product-stock">Steak</p>
+                        <div class="bottom">
+                            <p class="product-price">Rp. 24.000</p>
+                            <img src="./images/product-meat-1.jpeg" class="product-image">
+                        </div>
+                    </a>
+                    <a href="#" class="product-items drinks" data-name="Mushroom Cocktail" data-price="14.000"
+                        data-image="product-drink-1.jpeg">
+                        <h2 class="product-title">Mushroom Cocktail</h2>
+                        <p class="product-stock">Hot Drinks</p>
+                        <div class="bottom">
+                            <p class="product-price">Rp. 14.000</p>
+                            <img src="./images/product-drink-1.jpeg" class="product-image">
+                        </div>
+                    </a>
+                    <a href="#" class="product-items drinks" data-name="Chocholate Milkshake" data-price="12.000"
+                        data-image="product-drink-2.jpeg">
+                        <h2 class="product-title">Chocolate Milkshake</h2>
+                        <p class="product-stock">Cold Drinks</p>
+                        <div class="bottom">
+                            <p class="product-price">Rp. 12.000</p>
+                            <img src="./images/product-drink-2.jpeg" class="product-image">
+                        </div>
+                    </a>
+                    <a href="#" class="product-items burger" data-name="Le Pigeon Burger" data-price="240.000"
+                        data-image="product-hamburger-1.jpeg">
+                        <h2 class="product-title">Le Pigeon Burger</h2>
+                        <p class="product-stock">Burger</p>
+                        <div class="bottom">
+                            <p class="product-price">Rp. 240.000</p>
+                            <img src="./images/product-hamburger-1.jpeg" class="product-image">
+                        </div>
+                    </a>
+                    <a href="#" class="product-items burger" data-name="Buckhrorn Burger" data-price="120.000"
+                        data-image="product-hamburger-2.jpeg">
+                        <h2 class="product-title">Buckhrorn Burger</h2>
+                        <p class="product-stock">Burger</p>
+                        <div class="bottom">
+                            <p class="product-price">Rp. 120.000</p>
+                            <img src="./images/product-hamburger-2.jpeg" class="product-image">
+                        </div>
+                    </a>
+                    <a href="#" class="product-items pizza" data-name="Pizza Hut Lv 1" data-price="120.000"
+                        data-image="product-pizza-1.jpeg">
+                        <h2 class="product-title">Pizza Hut Lv 1</h2>
+                        <p class="product-stock">Pizza</p>
+                        <div class="bottom">
+                            <p class="product-price">Rp. 120.000</p>
+                            <img src="./images/product-pizza-1.jpeg" class="product-image">
+                        </div>
+                    </a>
+                    <a href="#" class="product-items pizza" data-name="Pizza Hut Lv 2" data-price="140.000"
+                        data-image="product-pizza-2.jpeg">
+                        <h2 class="product-title">Pizza Hut Lv 2</h2>
+                        <p class="product-stock">Pizza</p>
+                        <div class="bottom">
+                            <p class="product-price">Rp. 140.000</p>
+                            <img src="./images/product-pizza-2.jpeg" class="product-image">
+                        </div>
+                    </a>
+                    <a href="#" class="product-items healthy" data-name="Salad Enak" data-price="23.000"
+                        data-image="product-salad-2.jpeg">
+                        <h2 class="product-title">Salad Enak</h2>
+                        <p class="product-stock">Healthy</p>
+                        <div class="bottom">
+                            <p class="product-price">Rp. 23.000</p>
+                            <img src="./images/product-salad-2.jpeg" class="product-image">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="cart">
+                <div class="cart-header">
+                    <h2 class="cart-title">Order #299312</h2>
+                    <button type="button" class="btn-clear">Clear All</button>
+                </div>
+                <div class="cart-body">
+
+                </div>
+                <div class="footer-item">
+                    <h3>Total</h3>
+                    <h3 class="cart-total"></h3>
+                </div>
+                <hr>
+                <button class="cart-pay">Bayar</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content">
+            <p class="copyright">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+                @muhammadyunusalmeida. All rights reserved
+            </p>
+            <div class="socials">
+                <a href="#" class="social-icon">
+                    <i class="bx bxl-twitter"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="bx bxl-github"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="bx bxl-facebook"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="bx bxl-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous">
+    </script>
+    <script src="./app.js"></script>
+    <script src="./filterCategory.js"></script>
+    <script src="./searchProduct.js"></script>
+</body>
+
+</html>
